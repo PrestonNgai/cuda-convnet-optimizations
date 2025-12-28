@@ -161,16 +161,18 @@ All performance conclusions are backed by profiling data.
 ---
 
 ## Repository Structure
-src/
-kernel_fusion_forward.cu # Fused convolution kernel
-unroll_forward.cu # Input unrolling (im2col)
-m3_forward.cu # Final optimized kernel
-m3/
-req_0/ # Streams optimization
-req_1/ # Tensor Core implementation
-op_*/ # Additional optimizations
-reports/
-profiling/ # Nsight screenshots & analysis
+## Repository Structure
+```text
+src/        # CUDA convolution kernels and core implementations
+  kernel_fusion_forward.cu     # Fused unroll + matmul + permute kernel
+  unroll_forward.cu            # Input unrolling (im2col)
+  m3_forward.cu                # Final optimized kernel (Tensor Cores, tiling)
+m3/         # Individual optimization variants
+  req_0/    # Streams (overlap compute & transfer)
+  req_1/    # Tensor Core (WMMA) implementation
+  op_*/     # Optional optimizations (register tiling, cuBLAS, etc.)
+reports/    # Profiling screenshots and performance analysis
+```
 
 ---
 
