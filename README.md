@@ -170,7 +170,7 @@ m3/         # Individual optimization variants
   req_0/    # Streams (overlap compute & transfer)
   req_1/    # Tensor Core (WMMA) implementation
   op_*/     # Optional optimizations (register tiling, cuBLAS, etc.)
-reports/    # Profiling screenshots and performance analysis
+ECE408_FA25_netid_m3_report/    # Profiling screenshots and performance analysis
 ```
 
 ---
