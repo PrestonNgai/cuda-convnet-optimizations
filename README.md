@@ -161,7 +161,6 @@ All performance conclusions are backed by profiling data.
 ---
 
 ## Repository Structure
-## Repository Structure
 ```text
 src/        # CUDA convolution kernels and core implementations
   kernel_fusion_forward.cu     # Fused unroll + matmul + permute kernel
